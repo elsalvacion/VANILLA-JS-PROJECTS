@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --gray-100: #f3f3f3;
+  --gray-200: #dbdbdb;
+  --gray-300: #8d8d8d;
+  --gray-400: #333;
+  --primary: #e2136e;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--gray-100);
+}
+
+.container {
+  width: 500px;
+  max-width: 90%;
+  height: 60vh;
+}
+.stepper-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.stepper-line {
+  position: absolute;
+  top: 50%;
+  background: var(--primary);
+  width: 0;
+  transform: translateY(-50%);
+  height: 3px;
+  z-index: -1;
+  transition: 0.5s ease;
+}
+
+.stepper-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background: var(--gray-300);
+  width: 100%;
+  transform: translateY(-50%);
+  height: 3px;
+  z-index: -1;
+  transition: 0.5s ease;
+}
+
+.step {
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--gray-300);
+  background: var(--white);
+}
+
+.step.active {
+  border-color: var(--primary);
+  transition: 0.3s ease 0.5s;
+}
+
+.container .btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-size: 16px;
+  padding: 7px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background: var(--primary);
+  color: var(--gray-100);
+  margin: 6px;
+}
+button:disabled {
+  background: var(--gray-300);
+  cursor: not-allowed;
+}
+button:active {
+  transform: scale(0.97);
+}
