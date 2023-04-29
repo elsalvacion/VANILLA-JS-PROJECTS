@@ -2,7 +2,7 @@
 
 Stepper is a simple progress web app
 
-[**Live Link:**] https://quiet-tanuki-b8d4e5.netlify.app/
+[**Live Link:**] https://spectacular-hotteok-9705a0.netlify.app/
 
 ##### Tech
 
